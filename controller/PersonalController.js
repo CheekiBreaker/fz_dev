@@ -19,24 +19,17 @@ class PersonalController {
     }
 
     async allPersonal(req, res) {
-        
+        const allPers = await allPers.findAll();
+        res.json(allPers);
     }
 
     async onePersonal(req, res, next) {
-    
+    const {id} = req.params;
+    const onePers = await onePers.findOne({
+        where: {id}
+    })
+    res.json(onePers.rows[0]);
     }
-
-    async updatePersonal(req, res, next) {
-    
-    }
-
-    async deletePersonal(req, res, next) {
-    
-    }
-
-
-
-
 }
 
 module.exports = new PersonalController();

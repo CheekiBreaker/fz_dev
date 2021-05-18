@@ -8,6 +8,8 @@ const User = sequelize.define('user', {
     last_name: {type: DataTypes.STRING, allowNull: true},
     email: {type: DataTypes.STRING, unique: true},
     password: {type: DataTypes.STRING},
+    carbindex: {type: DataTypes.REAL},
+    susindex: {type: DataTypes.REAL},
     role: {type: DataTypes.STRING, defaultValue: 'user'}
 });
 
@@ -35,7 +37,7 @@ const Food = sequelize.define('food', {
     b: {type: DataTypes.REAL, allowNull: false},
     g: {type: DataTypes.REAL, allowNull: false},
     y: {type: DataTypes.REAL, allowNull: false},
-    countxe: {type: DataTypes.INTEGER},
+    countxe: {type: DataTypes.REAL},
     title: {type: DataTypes.STRING, allowNull: false}
 });
 

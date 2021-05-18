@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Диа формула</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__top">
+                <a href="./index.html"><img class="header__logo" src="./media/logo.svg" alt="Логотип"></a>
+                <h2 class="header__center">Диа Формула</h2>
+                <a class="header__btn-enter btn-rega" href="./login.html">Авторизация</a>
+            </div>
+            <div class="header__form-center">
+                <div class="registration-form">
+                    <header>
+                      <h1>Регистрация</h1>
+                      <p>Введите ваши данные</p>
+                    </header>
+                    <form>
+                      <div class="input-section email-section">
+                        <input class="email" type="email" placeholder="Email" autocomplete="off"/>
+                        <div class="animated-button"><span class="icon-paper-plane"><i class="fa fa-envelope-o">@</i></span><span class="next-button email"><i class="fa fa-arrow-up">></i></span></div>
+                      </div>
+                      <div class="input-section password-section folded">
+                        <input class="password" type="password" placeholder="Пароль"/>
+                        <div class="animated-button"><span class="icon-lock"><i class="fa fa-lock">**</i></span><span class="next-button password"><i class="fa fa-arrow-up">></i></span></div>
+                      </div>
+                      <div class="input-section repeat-password-section folded">
+                        <input class="repeat-password" type="password" placeholder="Повторите пароль"/>
+                        <div class="animated-button"><span class="icon-repeat-lock"><i class="fa fa-lock">**</i></span><span class="next-button repeat-password"><i class="fa fa-paper-plane">></i></span></div>
+                      </div>
+                      <div class="success"> 
+                        <p> Вы успешно зарегистрировались</p>
+                      </div>
+                     
+                    </form>
+                    <p class="header__form-remember">
+                        Забыли пароль?
+                    </p>
+                  </div>
+                  
+            </div>
+
+    </header>
+    
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

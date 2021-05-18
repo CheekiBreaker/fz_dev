@@ -3,9 +3,9 @@ const jwt = require('jsonwebtoken');
 const AppError = require('../error/AppError');
 const {User, UserData} = require('../models/models');
 
-const onJWT = (id, first_name, middle_name, last_name, email, role) => {
+const onJWT = (id, first_name, middle_name, last_name, email,carbindex, susindex, role) => {
     return jwt.sign({
-        id, first_name, middle_name, last_name, email, role
+        id, first_name, middle_name, last_name, email, carbindex, susindex, role
        },
        process.env.SECRET_KEY,
        {expiresIn: '12h'}
@@ -14,7 +14,7 @@ const onJWT = (id, first_name, middle_name, last_name, email, role) => {
 
 class UserController {
     async registation(req, res, next) {
-        const {first_name, middle_name, last_name, email, password, role} = req.body;
+        const {first_name, middle_name, last_name, email, password,carbindex, susindex, role} = req.body;
         if(!email || !password) {
             return next(AppError.badRequest('Не правильный email или пароль'));
         }
@@ -25,7 +25,7 @@ class UserController {
             return next(AppError.badRequest('Такой пользователь уже есть'));
        }
        const hashPassword = await bcrypt.hash(password, 7);
-       const user = await User.create({first_name, middle_name, last_name, email, password: hashPassword, role});
+       const user = await User.create({first_name, middle_name, last_name, email, carbindex, susindex, password: hashPassword, role});
        const userData = await UserData.create({userId: user.id});
        const token = onJWT(user.id, user.first_name, user.middle_name, user.last_name,
         user.email, user.role);
@@ -33,7 +33,11 @@ class UserController {
     }
 
     async login(req, res) {
-        
+       const {email, password} = req.params;
+       const auth = await auth.findOne({
+        where:{email}
+       })
+       res.json(auth);
     }
 
     async checkRole(req, res, next) {

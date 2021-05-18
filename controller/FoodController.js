@@ -1,3 +1,4 @@
+
 const AppError = require('../error/AppError');
 const {Food} = require('../models/models');
 class FoodController {
@@ -10,24 +11,12 @@ class FoodController {
     }
 
     async allFood(req, res) {
-        
+
     }
 
     async oneFood(req, res, next) {
-    
+
     }
-
-    async updateFood(req, res, next) {
-    
-    }
-
-    async deleteFood(req, res, next) {
-    
-    }
-
-
-
-
 }
 
 module.exports = new FoodController();
