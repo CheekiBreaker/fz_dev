@@ -9,7 +9,7 @@ const personalRouter = require('./PersonalRoutes');
 
 
 
-router.use('/user', userRouter);
+router.use('/use', userRouter);
 router.use('/food', foodRouter);
 router.use('/library', libraryRouter);
 router.use('/long', typelRouter);
