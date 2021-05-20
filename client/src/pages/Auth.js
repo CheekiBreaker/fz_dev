@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import Header from '../components/rega/Header';
 
 export default function Auth(){
     return(
         <div>
-            auth
+            <Header/>
         </div>
     )
 }

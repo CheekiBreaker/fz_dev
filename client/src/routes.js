@@ -1,16 +1,17 @@
 import Admin from "./pages/Admin";
 import Auth from "./pages/Auth";
+import Count from "./pages/Counter";
 import Library from "./pages/Library";
 import Menu from "./pages/Menu";
 import Personal from "./pages/Personal";
-import { ADMIN_ROUTE, LIBRARY_ROUTE, LOGIN_ROUTE, MENU_ROUTE, PERSONAL_ROUTE, REGISTRATION_ROUTE } from "./paths/const";
+import { ADMIN_ROUTE,LIBRARY_ROUTE, LOGIN_ROUTE, MENU_ROUTE, PERSONAL_ROUTE, REGISTRATION_ROUTE, COUNTER_ROUTE} from "./paths/const";
 
 
-
+/*
 export const authRoutes = [
     {
         path: ADMIN_ROUTE,
-        Component : Admin
+        Component:Admin
     },
 
     {
@@ -23,7 +24,7 @@ export const authRoutes = [
         Component: Personal
     },
 
-];
+];*/
 
 export const publicRoutes = [
     {
@@ -39,5 +40,23 @@ export const publicRoutes = [
     {
         path: LIBRARY_ROUTE,
         Component: Library
+    },
+    {
+        path: ADMIN_ROUTE,
+        Component:Admin
+    },
+
+    {
+        path: MENU_ROUTE,
+        Component: Menu
+    },
+
+    {
+        path: PERSONAL_ROUTE,
+        Component: Personal
+    },
+    {
+        path:COUNTER_ROUTE,
+        Component:Count
     },
 ];

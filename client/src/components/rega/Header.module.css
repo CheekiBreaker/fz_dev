@@ -125,11 +125,11 @@ body {
     font-weight: 500;
   }
   
-  .animated-button {
+  .animated_button {
     width: 20%;
     background-color: #EAEAEA;
   }
-  .animated-button span {
+  .animated_button span {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -148,11 +148,11 @@ body {
     -webkit-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
   }
-  .animated-button span i {
+  .animated_button span i {
     font-size: 25px;
     color: #5DC090;
   }
-  .animated-button .next-button {
+  .animated_4button .next-button {
     background: transparent;
     color: #EAEAEA;
     font-weight: 100;

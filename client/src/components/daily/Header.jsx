@@ -1,13 +1,15 @@
 import React from 'react';
 import styles from './Header.module.css';
 import logo from '../media/logo.svg';
+import { LIBRARY_ROUTE } from '../../paths/const';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
     return(
 <header class={styles.header}>
         <div class={styles.container}>
             <div class={styles.header__top}>
-                <a><img class={styles.header__logo} src={logo} alt="Логотип"/></a>
+                <NavLink to={LIBRARY_ROUTE}><img class={styles.header__logo} src={logo} alt="Логотип"/></NavLink>
                 <h2 class={styles.header__center}>Дневник</h2>
                 <a class={styles.header__btn__enter}>Давиденко А.А.</a>
             </div>
