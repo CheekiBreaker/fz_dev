@@ -5,8 +5,11 @@ import counter from '../store/counter';
 
 
 const Counter = observer(() =>{
+
     return(
+       
         <div>
+            
              {"щетчик = " + counter.i}
             <input id="a" type="float" placeholder="Sugar"/>
             <input id="b" type="float" placeholder="XE"/>
@@ -15,13 +18,5 @@ const Counter = observer(() =>{
 
     )
 });
-class Shet{
-    constructor(props){
 
-        this.state ={
-            a,b
-        };
-    }
-}
-console.log(Counter);
 export default Counter;

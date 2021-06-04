@@ -1,5 +1,5 @@
 import {Redirect, Route, Switch} from 'react-router-dom';
-import { LIBRARY_ROUTE } from '../paths/const';
+import { INDEX_ROUTE,LIBRARY_ROUTE } from '../paths/const';
 import { authRoutes, publicRoutes } from '../routes';
 /*import {Context} from '../index';
 import { useContext } from 'react';*/

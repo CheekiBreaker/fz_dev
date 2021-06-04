@@ -1,12 +1,9 @@
 import React from 'react';
-import Header from '../components/index/Header';
-import Body from '../components/index/Body';
-
+import Header from '../components/litra/Header';
 export default function Library(){
     return(
         <div>
            <Header/>
-           <Body/>
         </div>
     )
 }
