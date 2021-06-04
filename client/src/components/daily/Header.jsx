@@ -76,7 +76,7 @@ const Header = () => {
                     </div>
                     <div class={styles.header__form__bottom}>
                         <input class={styles.header__form__input}  type="text"/>
-                        <div id={styles.result} style="color: #5DC090; font-weight: 800; font-size: 18px;"></div>
+                        <div id={styles.result} ></div>
                     </div>
                 </section>
                 <input class={styles.submit} type="button" value="Сохранить" onclick="addition();"/><br/>
