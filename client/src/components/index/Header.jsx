@@ -1,18 +1,29 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import styles from './Header.module.css';
 import logo from '../media/logo.svg';
 import heart from '../media/heart.svg';
 import { LOGIN_ROUTE, REGISTRATION_ROUTE } from '../../paths/const';
 import { NavLink } from 'react-router-dom';
+import {Context} from "../../index";
+import {observer} from "mobx-react-lite";
 
-const Header = () => {
+const Header = observer(() => {
+    const {user} = useContext(Context);
     return(
     <header class={styles.header}>
         <div class={styles.container}>
-            <div class={styles.header__top}>
-                <img class={styles.header__logo} src={logo}/>
-                <NavLink to ={LOGIN_ROUTE} class={styles.header__btn__enter} >Войти</NavLink>
-            </div>
+            {
+             user.checkUser ?
+                 <div className={styles.header__top}>
+                     <img className={styles.header__logo} src={logo}/>
+                     <NavLink to={LOGIN_ROUTE} class={styles.header__btn__enter}>Выход</NavLink>
+                 </div>
+                 :
+                 <div className={styles.header__top}>
+                     <img className={styles.header__logo} src={logo}/>
+                     <button onClick ={ ()=> user.setCheckUser(true)}>Вход</button>
+                 </div>
+            }
             <div class={styles.header__content}>
                     <div class={styles.header__content__left}>
                         <h1 class={styles.header__title}>Диа формула</h1>
@@ -29,6 +40,6 @@ const Header = () => {
     </header>
     
     )
-}
+});
 
 export default Header;

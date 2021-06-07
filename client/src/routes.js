@@ -9,7 +9,7 @@ import Products from "./pages/Products";
 import { ADMIN_ROUTE,LIBRARY_ROUTE, LOGIN_ROUTE, MENU_ROUTE, PERSONAL_ROUTE, REGISTRATION_ROUTE, COUNTER_ROUTE, INDEX_ROUTE, PRODUCTS_ROUTE} from "./paths/const";
 
 
-/*
+
 export const authRoutes = [
     {
         path: ADMIN_ROUTE,
@@ -26,7 +26,7 @@ export const authRoutes = [
         Component: Personal
     },
 
-];*/
+];
 
 export const publicRoutes = [
     {
@@ -42,20 +42,6 @@ export const publicRoutes = [
     {
         path: LIBRARY_ROUTE,
         Component: Library
-    },
-    {
-        path: ADMIN_ROUTE,
-        Component:Admin
-    },
-
-    {
-        path: MENU_ROUTE,
-        Component: Menu
-    },
-
-    {
-        path: PERSONAL_ROUTE,
-        Component: Personal
     },
     {
         path:COUNTER_ROUTE,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import logo from '../media/logo.svg'
 import s from './Header.module.css';
 import food from '../media/food.jpg';
@@ -9,8 +9,11 @@ import f4 from '../media/4.png';
 import f5 from '../media/5.png';
 import { NavLink } from 'react-router-dom';
 import { INDEX_ROUTE, MENU_ROUTE, PERSONAL_ROUTE } from '../../paths/const';
+import {observer} from "mobx-react-lite";
+import {Context} from "../..";
 
-const Header = () => {
+const Header = observer(() => {
+    const {food} = useContext(Context);
     return (
         <header class={s.header}>
             <div class={s.container}>
@@ -24,6 +27,13 @@ const Header = () => {
                         <section class={s.form__products__content}>
                             <img src={food} alt="food" class={s.product} />
                             <div class={s.form__content__description}>
+                                {food.menu.map(eda =>
+                                <div>
+                                    <h1 key ={eda.id}></h1>
+                                    <div>{eda.countxe}</div>
+                                    <div>{eda.title}</div>
+                                </div>
+                                )}
                                 <span class={s.desc}>Краткий состав</span>
                                 <span class={s.prod}>Б: 12</span>
                                 <span class={s.prod}>Ж: 13</span>
@@ -111,6 +121,6 @@ const Header = () => {
     </header >
 
     )
-}
+});
 
 export default Header;
