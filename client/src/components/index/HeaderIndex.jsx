@@ -16,7 +16,7 @@ const Header = observer(() => {
              user.checkUser ?
                  <div className={styles.header__top}>
                      <img className={styles.header__logo} src={logo}/>
-                     <NavLink to={LOGIN_ROUTE} class={styles.header__btn__enter}>Выход</NavLink>
+                     <NavLink to={LOGIN_ROUTE} class={styles.header__btn__enter} onClick ={ ()=> user.setCheckUser(false)}>Выход</NavLink>
                  </div>
                  :
                  <div className={styles.header__top}>

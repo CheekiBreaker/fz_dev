@@ -9,7 +9,7 @@ $('.email').on("change keyup paste",
   }
 );
 
-$('.next-button').hover(
+getElementById('.next-button').hover(
   function(){
     $(this).css('cursor', 'pointer');
   }
@@ -64,7 +64,7 @@ $('.next-button.repeat-password').click(
     $('.success').css("marginTop", 0);
   }
 );
-*/
+/*
 function addition() {
   var a = parseFloat(document.getElementById('a').value);
   var b = parseFloat(document.getElementById('b').value);
@@ -74,7 +74,7 @@ function addition() {
   if (isNaN(b)==true) b==0;
   
  switch (true){
-     case document.getElementById('4').checked:/*Обработчик не бывшей нагрузки*/
+     case document.getElementById('4').checked:
          if ((a == 3 || a < 3 ) && (b == 0 || b == isNaN || b < 4)){
              document.getElementById('result').innerHTML ='Покушай, иначе станет плохо';
           }else{
@@ -161,7 +161,7 @@ function addition() {
                  };
              };
           break;
-          case document.getElementById('1').checked:/*Обработчик легкой нагрузки*/
+          case document.getElementById('1').checked:
              if ((a == 3 || a < 3 ) && (b == 0 || b == isNaN || b < 4)){
                  document.getElementById('result').innerHTML ='Покушай, иначе станет плохо';
               }else{
@@ -248,7 +248,7 @@ function addition() {
                      };
           };
           break;
-          case document.getElementById('2').checked:/*Обработчик средней нагрузки*/
+          case document.getElementById('2').checked:
              if ((a == 3 || a < 3 ) && (b == 0 || b == isNaN || b < 4)){
                  document.getElementById('result').innerHTML ='Покушай, иначе станет плохо';
               }else{
@@ -335,7 +335,7 @@ function addition() {
                      };
                  };
           break;
-          case document.getElementById('3').checked:/*Обработчик тяжелой нагрузки*/
+          case document.getElementById('3').checked:
              if ((a == 3 || a < 3 ) && (b == 0 || b == isNaN || b < 4)){
                  document.getElementById('result').innerHTML ='Покушай, иначе станет плохо';
               }else{
@@ -423,4 +423,4 @@ function addition() {
                  };
           break;
  }
-};
+};*/
